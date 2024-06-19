@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Tenor+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="icon" href="./img/favicon.png" type="image/png" />
+  </head>
+  <body>
+    <header>
+      <div class="header__inner">
+        <h1 class="header__logo">
+          <a href="#fv" class="logo-link"
+            ><img src="./img/logo.png" alt="Macaroonia" width="257" height="40"
+          /></a>
+        </h1>
+        <h1 class="header__logo--pc">
+          <a href="#fv" class="logo-link"
+            ><img
+              src="./img/logo-pc.png"
+              alt="Macaroonia"
+              width="398"
+              height="40"
+          /></a>
+        </h1>
+        <!-- jsスライドトグルのためにlogo-linkクラスを入れている -->
+        <nav class="header__nav">
+          <a href="#about" class="header__link logo-link">About</a>
+          <a href="#menu" class="header__link logo-link">Menu</a>
+          <a href="#access" class="header__button logo-link">Access</a>
+        </nav>
+        <!-- spのハンバーガーアイコン(アイコンをhtmlで作る) -->
+        <button class="header__drawerButton drawer-icon" id="drawerButton">
+          <span class="drawer-icon__bar"></span>
+          <span class="drawer-icon__bar"></span>
+          <span class="drawer-icon__bar"></span>
+        </button>
+      </div>
+
+      <div id="mask"></div>
+
+      <!-- ドロワーメニュー -->
+      <div class="drawer" id="drawer">
+        <div class="drawer__inner">
+          <nav class="drawer__nav">
+            <li><a href="#fv" class="drawer__link">Home</a></li>
+            <li><a href="#about" class="drawer__link">About</a></li>
+            <li><a href="#menu" class="drawer__link">Menu</a></li>
+            <li><a href="#access" class="drawer__link">Access</a></li>
+          </nav>
+          <a href="#CTA" class="drawer__coupon">30% OffクーポンをGet</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="fv" id="fv">
+        <div class="fv__inner">
+          <div class="fv__text--container">
+            <h2 class="fv__heading">
+              <span class="fv__heading--sub"
+                >オーガニックマカロン & コーヒー</span
+              >
+              <span class="fv__heading--main">Macaroonia</span>
+              <span class="fv__heading--sub">マカロニア</span>
+            </h2>
+            <button class="fv__button--coupon">30% OffクーポンをGet</button>
+          </div>
+          <div class="fv__img--container">
+            <img src="./img/fv-img-sp.png" alt="" width="343" height="281" />
+          </div>
+          <div class="fv__img--container--pc">
+            <img src="./img/fv-img-pc.png" alt="" width="524" height="430" />
+          </div>
+        </div>
+      </section>
+
+      <section class="about" id="about">
+        <div class="section__inner">
+          <span class="horizontal-line"></span>
+          <ul class="about__contents-container">
+            <li class="about__contents-list">
+              <div class="about__img--container">
+                <img
+                  src="img/about-img-space-sp.png"
+                  alt=""
+                  class="about__img"
+                />
+              </div>
+              <div class="about__text--container">
+                <h3 class="contents--heading">
+                  <span class="contents--heading-sub">space</span>
+                  <span class="contents--heading-main">空間</span>
+                </h3>
+                <p class="about__contents--text">
+                  ここは、上質なペストリーの芸術と、豊かな香りの新鮮なコーヒーが融合する癒しの空間です。当カフェでは、味の調和、品質の高い素材の喜び、そして温かい雰囲気を大切にしています。<span
+                    class="text-bold"
+                    >美味しいお菓子とコーヒーを楽しむ場所以上の存在です。</span
+                  >ここは、リラックスし、友人とつながり、またはただ自分自身のためのひとときを過ごすための隠れ家です。居心地の良い空間、フレンドリーなスタッフ、そして細部へのこだわりがあなたをお迎えします。
+                </p>
+              </div>
+            </li>
+            <li class="about__contents-list reverse">
+              <div class="about__img--container">
+                <img
+                  src="./img/about-img-symphony-sp.png"
+                  alt=""
+                  class="about__img"
+                />
+              </div>
+              <div class="about__text--container">
+                <h3 class="contents--heading">
+                  <span class="contents--heading-sub">symphony</span>
+                  <span class="contents--heading-main"
+                    >風味と食感のシンフォニー</span
+                  >
+                </h3>
+                <p class="about__contents--text">
+                  私たちの使命は、オーガニックマカロンの<span class="text-bold"
+                    >一口一口があなたを素晴らしい味の世界へと連れて行く</span
+                  >ことです。それぞれのマカロンは、最高品質のオーガニック素材を使用し、丹念に手作りされています。一つ一つが、風味と食感のシンフォニーです。
+                </p>
+              </div>
+            </li>
+            <li class="about__contents-list">
+              <div class="about__img--container">
+                <img
+                  src="img/about-img-coffee-sp.png"
+                  alt=""
+                  class="about__img"
+                />
+              </div>
+              <div class="about__text--container">
+                <h3 class="contents--heading">
+                  <span class="contents--heading-sub">coffee</span>
+                  <span class="contents--heading-main">コーヒー</span>
+                </h3>
+                <p class="about__contents--text">
+                  私たちはコーヒーにも情熱を注いでいます。<span
+                    class="text-bold"
+                    >最高のオーガニック農園から厳選</span
+                  >したコーヒー豆を使用し、完璧に焙煎しています。お客様に提供する一杯一杯が、品質へのこだわりと持続可能性へのコミットメントを証明しています。
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="menu" id="menu">
+        <div class="section__inner menu__section--inner">
+          <span class="horizontal-line"></span>
+          <h3 class="contents--heading menu__section--heading">
+            <span class="contents--heading-sub">recommend</span>
+            <span class="contents--heading-main contents--heading-main--SP"
+              >この夏のレコメンドを<br />
+              ご紹介</span
+            >
+            <span class="contents--heading-main contents--heading-main--PC"
+              >この夏のレコメンドをご紹介</span
+            >
+          </h3>
+          <ul class="menu__menu--container">
+            <li class="menu__item-sp">
+              <div class="menu__img--container">
+                <img
+                  src="./img/menu-img-pinkGrapefruits.png"
+                  alt=""
+                  class="menu__img"
+                />
+              </div>
+              <div class="menu__text--container">
+                <h4 class="menu__name">
+                  ピンク<br />
+                  グレープフルーツ
+                </h4>
+                <p class="menu__text--detail">酸味のある爽やかな味わい</p>
+                <p class="menu__text--price">300 yen</p>
+              </div>
+            </li>
+            <li class="menu__item-sp">
+              <div class="menu__img--container">
+                <img
+                  src="./img/menu-img-macadamiaNuts.png"
+                  alt=""
+                  class="menu__img"
+                />
+              </div>
+              <div class="menu__text--container">
+                <h4 class="menu__name">
+                  マカダミアナッツ<br />
+                  <br />
+                </h4>
+                <p class="menu__text--detail">濃厚なナッツの応酬</p>
+                <p class="menu__text--price">300 yen</p>
+              </div>
+            </li>
+            <li class="menu__item-sp">
+              <div class="menu__img--container">
+                <img
+                  src="./img/menu-img-choco.png"
+                  alt=""
+                  class="menu__img"
+                />
+              </div>
+              <div class="menu__text--container">
+                <h4 class="menu__name">チョコ</h4>
+                <p class="menu__text--detail">
+                  ミルクやコーヒーと<br />相性抜群
+                </p>
+                <p class="menu__text--price">300 yen</p>
+              </div>
+            </li>
+            <li class="menu__item-sp">
+              <div class="menu__img--container">
+                <img
+                  src="./img/menu-img-CBN.png"
+                  alt=""
+                  class="menu__img"
+                />
+              </div>
+              <div class="menu__text--container">
+                <h4 class="menu__name">CBN</h4>
+                <p class="menu__text--detail">
+                  食べるリラックス、<br />CBN成分たっぷり
+                </p>
+                <p class="menu__text--price">500 yen</p>
+              </div>
+            </li>
+            <li class="menu__item-sp">
+              <div class="menu__img--container">
+                <img
+                  src="./img/menu-img-milk.png"
+                  alt=""
+                  class="menu__img"
+                />
+              </div>
+              <div class="menu__text--container">
+                <h4 class="menu__name">フレッシュミルク</h4>
+                <p class="menu__text--detail">搾りたてのモーモーミルク</p>
+                <p class="menu__text--price">500 yen</p>
+              </div>
+            </li>
+            <li class="menu__item-sp">
+              <div class="menu__img--container">
+                <img
+                  src="./img/menu-img-cafelatte.png"
+                  alt=""
+                  class="menu__img"
+                />
+              </div>
+              <div class="menu__text--container">
+                <h4 class="menu__name">カフェラテ</h4>
+                <p class="menu__text--detail">とろける甘味と苦味</p>
+                <p class="menu__text--price">600 yen</p>
+              </div>
+            </li>
+            <li class="menu__item-sp">
+              <div class="menu__img--container">
+                <img
+                  src="./img/menu-img-icedCoffee.png"
+                  alt=""
+                  class="menu__img"
+                />
+              </div>
+              <div class="menu__text--container">
+                <h4 class="menu__name">水出し<br />アイスコーヒー</h4>
+                <p class="menu__text--detail">-10°c のキンキン</p>
+                <p class="menu__text--price">600 yen</p>
+              </div>
+            </li>
+            <li class="menu__item-sp">
+              <div class="menu__img--container">
+                <img
+                  src="./img/menu-img-coffee.png"
+                  alt=""
+                  class="menu__img"
+                />
+              </div>
+              <div class="menu__text--container">
+                <h4 class="menu__name">
+                  ブレンド<br />
+                  <br />
+                </h4>
+                <p class="menu__text--detail">目が覚めるほどの強さ</p>
+                <p class="menu__text--price">600 yen</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <div id="modal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <img id="modal-image" src="" alt="Modal Image" class="modal-image" />
+          <div class="modal-text">
+            <h4 id="modal-name" class="modal-name"></h4>
+            <p id="modal-detail" class="modal-detail"></p>
+            <p id="modal-price" class="modal-price"></p>
+          </div>
+        </div>
+      </div>
+
+      <section class="CTA" id="CTA">
+        <div class="section__inner--CTA">
+          <div class="CTA__img--container">
+            <img
+              src="./img/CTA-img-coupon.png"
+              alt="クーポン"
+              class="CTA__img"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="access" id="access">
+        <div class="section__inner">
+          <span class="horizontal-line"></span>
+          <div class="access__map--container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3204.007023070342!2d136.64559647593148!3d36.57804858019061!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5ff8334203bb8605%3A0x5d5df6011ebba7ea!2z6YeR5rKi6aeF!5e0!3m2!1sja!2sjp!4v1718689423972!5m2!1sja!2sjp"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade" class="access__map"
+            ></iframe>
+          </div>
+          <ul class="access__shopDetail--container">
+            <li class="access__shopDetail--item">
+              <h5 class="access__shopDetail--heading">店舗住所</h5>
+              <p class="access__shopDetail--detail">
+                〒XXX-XXXX<br />
+                石川県金沢市XX町 XX-XXX
+              </p>
+            </li>
+            <li class="access__shopDetail--item">
+              <h5 class="access__shopDetail--heading">アクセス</h5>
+              <p class="access__shopDetail--detail forSP">
+                駐車場10台有<br>
+                （TELにてご予約OK）<br />
+                XX駅より徒歩XX分<br />
+                XX駅より車でXX分
+              </p>
+              <p class="access__shopDetail--detail forPC">
+                駐車場10台有（TELにてご予約OK）<br />
+                XX駅より徒歩XX分<br />
+                XX駅より車でXX分
+              </p>
+            </li>
+            <li class="access__shopDetail--item">
+              <h5 class="access__shopDetail--heading">TEL</h5>
+              <p class="access__shopDetail--detail">
+                0120-xxx-xxxx<br />
+                <spna class="text-small"
+                  >（お問合せの際はホームページ見たとお伝えくださるとスムーズです）</spna
+                >
+              </p>
+            </li>
+            <li class="access__shopDetail--item">
+              <h5 class="access__shopDetail--heading">営業時間</h5>
+              <p class="access__shopDetail--detail">10:00 ~ 17:00</p>
+            </li>
+            <li class="access__shopDetail--item">
+              <h5 class="access__shopDetail--heading">定休日</h5>
+              <p class="access__shopDetail--detail">水曜日</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer__inner">
+        <div class="footer__contents--container">
+          <h1 class="header__logo">
+            <a href="#fv" class="logo-link"
+              ><img
+                src="./img/logo.png"
+                alt="Macaroonia"
+                width="257"
+                height="40"
+            /></a>
+          </h1>
+          <h1 class="header__logo--pc">
+            <a href="#fv" class="logo-link"
+              ><img
+                src="./img/logo.png"
+                alt="Macaroonia"
+                width="257"
+                height="40"
+            /></a>
+          </h1>
+          <p class="footer__text">オーガニックマカロン & coffee</p>
+          <p class="footer__text">Macaroonia（マカロニア）</p>
+        </div>
+        <div class="footer__sns--container">
+          <a href="https://www.instagram.com/?hl=ja" target="_blank"
+            ><img
+              src="./img/img-insta-icon.png"
+              alt="instagram"
+              width="40"
+              height="40"
+          /></a>
+          <a href="https://x.com/home" target="_blank"
+            ><img src="./img/img-x-icon.png" alt="X" width="40" height="40"
+          /></a>
+        </div>
+        <small class="footer__copyright"
+          >©︎ macaroonia all rights reserved.</small
+        >
+      </div>
+    </footer>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>

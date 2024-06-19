@@ -1,0 +1,726 @@
+@charset "UTF-8";
+body {
+  font-size: 16px;
+  color: #000;
+  font-family: "Noto Sans JP", sans-serif;
+  background: #fff;
+  margin: 0;
+  font-weight: normal;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.text-small {
+  font-size: 12px;
+}
+
+.section__inner {
+  max-width: 343px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+@media screen and (min-width: 768px) {
+  .section__inner {
+    max-width: 1080px;
+    width: calc(100% - 32px);
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+}
+header {
+  border-bottom: 1px solid #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; /* 追加: ヘッダーを全幅に設定 */
+  z-index: 1000; /* 追加: ヘッダーを前面に表示 */
+  background: #fff; /* 追加: ヘッダーの背景色を設定 */
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; /* 追加: ボックスモデルを調整 */
+}
+
+.header__logo--pc {
+  display: none;
+}
+
+.header__drawerButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 80px;
+  width: 80px;
+  padding: 24px 20px;
+  position: relative;
+  z-index: 1001;
+}
+.header__drawerButton.open span {
+  background-color: #fff;
+}
+.header__drawerButton.open span:nth-child(1) {
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  -webkit-transform: rotate(38.66deg);
+          transform: rotate(38.66deg);
+  width: 51.22px;
+}
+.header__drawerButton.open span:nth-child(2) {
+  opacity: 0;
+}
+.header__drawerButton.open span:nth-child(3) {
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+  -webkit-transform: rotate(-38.66deg);
+          transform: rotate(-38.66deg);
+  width: 51.22px;
+}
+
+.drawer-icon__bar {
+  background-color: #000;
+  height: 1px;
+  width: 100%;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.header__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 80px;
+  padding-left: 16px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 22px;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.header__nav {
+  display: none;
+}
+
+#mask {
+  display: none;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+#mask.open {
+  display: block;
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.drawer {
+  width: 275px;
+  height: 667px;
+  background-color: #f7eef8;
+  position: absolute;
+  top: 0;
+  left: -300px;
+  border-radius: 0 0 80px 0;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.drawer.open {
+  display: block; /* 表示 */
+  left: 0;
+}
+
+.drawer__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; /* 追加: Flexboxを使用 */
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; /* 追加: 縦方向に配置 */
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; /* 追加: 中央揃え */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; /* 追加: 中央揃え */
+  padding-top: 153px;
+  padding-bottom: 154px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.drawer__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 24px;
+}
+
+.drawer__link {
+  line-height: 1.2;
+  font-size: 32px;
+  font-family: "Tenor Sans", sans-serif;
+  letter-spacing: 0.15em;
+}
+
+.drawer__coupon {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex; /* inline-blockからinline-flexに変更 */
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; /* 水平方向の中央揃え */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; /* 垂直方向の中央揃え */
+  color: #a63f34;
+  height: 44px;
+  font-size: 16px;
+  font-family: "Noto Sans JP", sans-serif;
+  border: 1px solid #a63f34;
+  margin-top: 56px;
+  padding: 0 32px; /* 上下のpaddingを0にする */
+  font-weight: normal;
+}
+
+@media screen and (min-width: 768px) {
+  .header__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 1080px;
+    height: 80px;
+    margin: 0 auto;
+    padding: 0 0;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: calc(100% - 32px);
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .header__logo {
+    display: none;
+  }
+  .header__logo--pc {
+    display: block;
+  }
+  .header__drawerButton {
+    display: none;
+  }
+  .header__nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 40px;
+    font-size: 16px;
+    font-family: "Tenor Sans", sans-serif;
+    letter-spacing: 0.15em;
+  }
+  .drawer {
+    display: none;
+  }
+  #mask {
+    display: none;
+  }
+}
+.fv {
+  padding-top: 80px;
+}
+
+.fv__inner {
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 64px;
+}
+
+.fv__heading {
+  display: inline-block;
+  text-align: center; /* 中央揃えにしたい場合 */
+}
+.fv__heading span {
+  display: block;
+}
+.fv__heading--sub {
+  font-size: 16px;
+  font-family: "Noto Sans JP", sans-serif;
+  letter-spacing: 0.15em;
+  line-height: 19px;
+}
+.fv__heading--main {
+  font-size: 40px;
+  font-family: "Tenor Sans", sans-serif;
+  letter-spacing: 0.15em;
+  line-height: 1.2;
+}
+.fv__heading span + span {
+  margin-top: 8px;
+}
+
+.fv__button--coupon {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex; /* inline-blockからinline-flexに変更 */
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; /* 水平方向の中央揃え */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; /* 垂直方向の中央揃え */
+  color: #a63f34;
+  height: 44px;
+  font-size: 16px;
+  font-family: "Noto Sans JP", sans-serif;
+  border: 1px solid #a63f34;
+  margin-top: 32px;
+  padding: 0 32px; /* 上下のpaddingを0にする */
+  font-weight: normal;
+}
+
+.fv__img--container {
+  text-align: center;
+  margin-top: 64px;
+}
+
+.fv__img--container--pc {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .fv__inner {
+    max-width: 1080px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    gap: 32px;
+    padding-top: 0;
+    width: calc(100% - 32px);
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .fv__text--container {
+    width: 524px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .fv__heading--main {
+    font-size: 56px;
+    line-height: 67px;
+  }
+  .fv__button--coupon {
+    width: auto;
+    margin-top: 32px;
+  }
+  .fv__img--container {
+    display: none;
+  }
+  .fv__img--container--pc {
+    display: block;
+  }
+}
+.horizontal-line {
+  display: block; /* spanはインライン要素なのでブロック要素にする */
+  width: 240px;
+  height: 1px; /* 高さを設定 */
+  background-color: #000; /* 線の色 */
+  margin: 0 auto; /* 水平方向に中央揃え */
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.about__contents-list + .about__contents-list {
+  margin-top: 64px;
+}
+
+.about__img {
+  width: 343px;
+  height: 272px;
+}
+
+.contents--heading {
+  margin-top: 40px;
+  text-align: left;
+}
+
+.contents--heading-sub {
+  display: block;
+  color: #a63f34;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.15em;
+}
+
+.contents--heading-main {
+  margin-top: 4px;
+  display: block;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: 0.15em;
+}
+
+.about__contents--text {
+  margin-top: 16px;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.15em;
+  text-align: left;
+}
+
+@media screen and (min-width: 768px) {
+  .about__contents-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    gap: 32px;
+  }
+  .about__contents-list + .about__contents-list {
+    margin-top: 80px;
+  }
+  .about__img--container, .about__text--container {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    max-width: 50%;
+  }
+  .about__img {
+    width: 524px;
+    height: 415px;
+    display: block;
+  }
+  .contents--heading {
+    margin-top: 0;
+  }
+  .about__contents-list.reverse {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse; /* 逆方向に並べる */
+  }
+  .about__contents--text {
+    margin-top: 40px;
+  }
+}
+.section__inner.menu__section--inner {
+  margin-top: 160px;
+}
+
+.menu__menu--container {
+  margin-top: 64px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  row-gap: 32px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.contents--heading-main.contents--heading-main--PC {
+  display: none;
+}
+
+.menu__text--container {
+  margin-top: 24px;
+}
+
+.menu__name {
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.15em;
+}
+
+.menu__text--detail {
+  margin-top: 16px;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.15em;
+}
+
+.menu__text--price {
+  margin-top: 16px;
+  line-height: 19px;
+  letter-spacing: 0.15em;
+}
+
+.menu__img {
+  width: 164px;
+  height: 164px;
+}
+
+@media screen and (min-width: 768px) {
+  .contents--heading.menu__section--heading {
+    text-align: center;
+  }
+  .contents--heading-main.contents--heading-main--SP {
+    display: none;
+  }
+  .contents--heading-main.contents--heading-main--PC {
+    display: block;
+  }
+  .menu__menu--container {
+    margin-top: 80px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 64px 32px;
+  }
+  .menu__img {
+    width: 246px;
+    height: 246px;
+  }
+}
+/* モーダルのスタイル */
+.modal {
+  display: none; /* デフォルトは非表示 */
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4); /* 背景を半透明に設定 */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; /* Flexboxを使用してコンテンツを中央に配置 */
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px 20px 40px 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+  z-index: 2001;
+  text-align: center;
+}
+
+.modal-name {
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.15em;
+}
+
+.modal-detail {
+  margin-top: 16px;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.15em;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.modal-price {
+  margin-top: 16px;
+  line-height: 19px;
+  letter-spacing: 0.15em;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-image {
+  width: 100%;
+  height: auto;
+}
+
+.modal-text {
+  margin-top: 20px;
+}
+
+.CTA {
+  background-image: url("../img/CTA-img-background.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.section__inner--CTA {
+  margin: 0 auto;
+  text-align: center;
+  padding-right: 16px;
+  padding-left: 16px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.CTA__img {
+  width: 343px;
+  height: 448px;
+}
+
+@media screen and (min-width: 768px) {
+  .CTA__img {
+    width: 498px;
+    height: 652px;
+  }
+}
+.access__shopDetail--container {
+  margin-top: 40px;
+}
+
+.access__map {
+  width: 343px;
+  height: 343px;
+}
+
+.access__shopDetail--item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #CACACA;
+  letter-spacing: 0.15em;
+}
+.access__shopDetail--item + .access__shopDetail--item {
+  margin-top: 24px;
+}
+
+.access__shopDetail--heading {
+  text-align: right;
+  width: 72px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0; /* この要素が縮まないようにする */
+  white-space: nowrap; /* テキストを1行に収める */
+  letter-spacing: 0.15em; /* 必要に応じて調整 */
+}
+
+.access__shopDetail--detail {
+  text-align: left;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.access__shopDetail--detail.forPC {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .access__map {
+    width: 1080px;
+    height: 353px;
+    width: calc(100% - 32px);
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .access__shopDetail--container {
+    max-width: 539px;
+  }
+  .access__shopDetail--item {
+    letter-spacing: auto;
+    white-space: nowrap; /* テキストを1行に収める */
+  }
+  .access__shopDetail--detail.forSP {
+    display: none;
+  }
+  .access__shopDetail--detail.forPC {
+    display: block;
+  }
+}
+footer {
+  background-color: #f7eef8;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.footer__inner {
+  padding: 0 24px;
+  text-align: center;
+}
+
+.footer__text {
+  margin-top: 8px;
+}
+
+.footer__sns--container {
+  margin-top: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; /* 必要に応じて中央揃え */
+  gap: 24px; /* 画像間の隙間を24pxに設定 */
+}
+
+.footer__copyright {
+  display: inline-block;
+  margin-top: 56px;
+  color: #a63f34;
+  letter-spacing: 0.15em;
+  text-align: center;
+}
